@@ -1,0 +1,56 @@
+/* Style du texte de la modal */
+.modalText {
+    padding: 10px;              /* Espacement interne autour du texte */
+    font-weight: bold;          /* Texte en gras */
+    margin: 0;                  /* Supprime les marges par défaut */
+    font-size: 18px;            /* Taille du texte */
+}
+
+/* Overlay de la modal : couvre tout l'écran avec un fond sombre */
+.custom-modal-overlay {
+    position: fixed;            /* Reste fixe même en scrollant */
+    top: 0;
+    left: 0;
+    width: 100%;                /* Prend toute la largeur */
+    height: 100%;               /* Prend toute la hauteur */
+    background-color: rgba(0, 0, 0, 0.4); /* Fond noir transparent */
+    display: flex;              /* Permet de centrer le contenu avec flexbox */
+    align-items: center;        /* Centre verticalement */
+    justify-content: center;    /* Centre horizontalement */
+    z-index: 999;               /* S'affiche au-dessus des autres éléments */
+}
+  
+/* Contenu de la modal */
+.custom-modal-content {
+    background-color: white;         /* Fond blanc */
+    padding: 20px 30px;              /* Espacement interne */
+    border-radius: 8px;              /* Coins arrondis */
+    position: relative;              /* Pour positionner le bouton "X" */
+    max-width: 400px;                /* Largeur maximale */
+    text-align: center;              /* Centre le texte */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre douce autour de la modal */
+    animation: fadeIn 0.3s ease-in-out;       /* Animation d'apparition */
+}
+  
+/* Bouton pour fermer la modal */
+.custom-modal-close {
+    position: absolute;        /* Positionné par rapport au parent */
+    top: 8px;                  /* Décalé vers le bas */
+    right: 12px;               /* Décalé vers la droite */
+    background: none;          /* Pas de fond */
+    border: none;              /* Pas de bordure */
+    font-size: 20px;           /* Taille du "X" */
+    cursor: pointer;           /* Curseur en forme de main */
+}
+  
+/* Animation de l'apparition de la modal */
+@keyframes fadeIn {
+    from {
+      opacity: 0;              /* Invisible au départ */
+      transform: scale(0.95);  /* Légèrement plus petit */
+    }
+    to {
+      opacity: 1;              /* Devient visible */
+      transform: scale(1);     /* Taille normale */
+    }
+}
